@@ -3,7 +3,7 @@
 const bikeList = [
     {
         nome: 'bmx1',
-        peso: 1,
+        peso: 12,
     },
     {
         nome: 'bmx2',
@@ -15,7 +15,7 @@ const bikeList = [
     },
     {
         nome: 'bmx4',
-        peso: 4,
+        peso: 0,
     },
     {
         nome: 'bmx5',
@@ -31,14 +31,14 @@ const bikeList = [
     },
     {
         nome: 'bmx8',
-        peso: 8,
+        peso: 10,
     },
 ]
 
 function getHeaviestBike() {
     let heaviestBike = [];
     for (let i = 0; i < bikeList.length; i++) {
-        if (bikeList[i].peso > heaviestBike || bikeList[i].peso > heaviestBike.peso) {
+        if (heaviestBike == 0 || bikeList[i].peso < heaviestBike.peso) {
             heaviestBike = bikeList[i]
         }
     }
