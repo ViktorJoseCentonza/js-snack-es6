@@ -48,7 +48,6 @@ function getHeaviestBike() {
 
 console.log("snack 1---------------------------------------------------------------------------------------------------------------");
 console.log(getHeaviestBike());
-alert(getHeaviestBike())
 console.log("snack 2---------------------------------------------------------------------------------------------------------------");
 
 
@@ -110,24 +109,24 @@ console.log(shortenSoccerTeamParameters());
 
 
 
-
+//generate random points for everyteam
 function assignRandomPoints() {
     for (let i = 0; i < soccerTeams.length; i++) {
         soccerTeams[i].punti = Math.floor(Math.random() * 30)
     }
 }
-
+//generate random penalties for everyteam
 function assignRandomPenalties() {
     for (let i = 0; i < soccerTeams.length; i++) {
         soccerTeams[i]["falli subiti"] = Math.floor(Math.random() * 10)
     }
 }
-
+//create new array without the punti parameter
 function shortenSoccerTeamParameters() {
     const shorterSoccerTeams = []
     for (let i = 0; i < soccerTeams.length; i++) {
-        const { punti, ...rest } = soccerTeams[i];
-        shorterSoccerTeams.push(rest)
+        const { punti, ...rest } = soccerTeams[i]; //removes punti and keeps the other params in "rest"
+        shorterSoccerTeams.push(rest)   //push "rest" into second array
     }
 
     return shorterSoccerTeams
