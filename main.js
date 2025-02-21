@@ -35,19 +35,19 @@ const bikeList = [
     },
 ]
 
-function getHeaviestBike() {
-    let heaviestBike = [];
+function getLightestBike() {
+    let lightestBike = [];
     for (let i = 0; i < bikeList.length; i++) {
-        if (heaviestBike == 0 || bikeList[i].peso < heaviestBike.peso) {
-            heaviestBike = bikeList[i]
+        if (lightestBike == 0 || bikeList[i].peso < lightestBike.peso) {
+            lightestBike = bikeList[i]
         }
     }
 
-    return heaviestBike
+    return lightestBike
 }
 
 console.log("snack 1---------------------------------------------------------------------------------------------------------------");
-console.log(getHeaviestBike());
+console.log(getLightestBike());
 console.log("snack 2---------------------------------------------------------------------------------------------------------------");
 
 
