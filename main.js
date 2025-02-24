@@ -43,11 +43,12 @@ function getLightestBike() {
         }
     }
 
-    return lightestBike
+    return lightestBike.nome
 }
 
 console.log("snack 1---------------------------------------------------------------------------------------------------------------");
-console.log(getLightestBike());
+console.log(`${getLightestBike()} is the lightest bike`);
+alert(`${getLightestBike()} is the lightest bike`)
 console.log("snack 2---------------------------------------------------------------------------------------------------------------");
 
 
@@ -135,3 +136,29 @@ function shortenSoccerTeamParameters() {
 
 
 
+array1 = [
+    {
+        nome: "primo",
+        punti: 10,
+        falli: 2,
+    },
+    {
+        nome: "primo",
+        punti: 10,
+        falli: 2,
+    },
+    {
+        nome: "primo",
+        punti: 10,
+        falli: 2,
+    },
+]
+console.log(array1);
+
+array2 = array1
+console.log(array2);
+
+for (let i = 0; i < array2.length; i++) {
+    delete array2[i].punti
+}
+console.log(array2); 
